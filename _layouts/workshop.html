@@ -6,60 +6,66 @@
   Use 'page.html' for other pages.
 -->
 <html>
-  <head>
-    <title>Data Carpentry: {{ page.venue }}</title>
-    {% include header.html %}
-    <meta name="venue" content="{{page.venue}}" />
-    <meta name="date" content="{{page.humandate}}" />
-    <meta name="startdate" content="{{page.startdate}}" />
-    <meta name="enddate" content="{{page.enddate}}" />
-    {% if page.redirect %}
-    <meta http-equiv="refresh" content="0; url={{page.redirect}}" />
-    {% endif %}
-  </head>
-  <body class="workshop">
+<head>
+  <title>Data Carpentry: {{ page.venue }}</title>
+  {% include header.html %}
+  <meta name="venue" content="{{page.venue}}" />
+  <meta name="date" content="{{page.humandate}}" />
+  <meta name="startdate" content="{{page.startdate}}" />
+  <meta name="enddate" content="{{page.enddate}}" />
+  {% if page.redirect %}
+  <meta http-equiv="refresh" content="0; url={{page.redirect}}" />
+  {% endif %}
+</head>
+<body class="workshop">
 
-    {% include github-ribbon.html %}
+{% include github-ribbon.html %}
 
-    <div class="container card">
-      {% include banner.html %}
-      <div class="jumbotron">
+<div class="container card">
+  {% include banner.html %}
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2 style="margin-top: 0px;">Data Carpentry Workshop @ {{page.venue}}</h2>
+        <div style="font-style:italic; margin-bottom: 10px;">
+          The <a href="https://www.medsci.ox.ac.uk/support-services/teams/facilities-booking/medical-sciences-teaching-centre" target="_blank" rel="nofollow">Medical Sciences Teaching Centre</a> (University of Oxford),
+          <a href="http://elixir-uk.org/" target="_blank" rel="nofollow">ELIXIR-UK</a> and the
+          <a href="https://www.software.ac.uk/" target="_blank" rel="nofollow">Software Sustainability Institute</a> are proud
+          to organise and host a data carpentry course in data analysis and software development covering
+          research software design best practices and programming in R for robust research software development.
+        </div>
         <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <h2>A Data Carpentry Workshop</a>
-	    <h2>{{page.venue}}</h2>
-            <div class="row">
-              <div class="col-md-6">
-                <p>{{page.humandate}}</p>
-                <p>{% if page.humantime %}{{page.humantime}}{% endif %}</p>
-              </div>
-              <div class="col-md-6">
-                <p>
-                <strong>Instructors:</strong>
-                {% if page.instructor %}
-                {{page.instructor | join: ', ' %}}
-                {% else %}
-                to be announced.
-                {% endif %}
-                </p>
-                {% if page.helper %}
-                <p>
-                <strong>Helpers:</strong>
-                {{page.helper | join: ', ' %}}
-                </p>
-                {% endif %}
-              </div>
-            </div>
+          <div class="col-md-6">
+            <p>{{page.humandate}}</p>
+            <p>{% if page.humantime %}{{page.humantime}}{% endif %}</p>
+          </div>
+          <div class="col-md-6">
+            <p>
+              <strong>Instructors:</strong>
+              {% if page.instructor %}
+              {{page.instructor | join: ', ' %}}
+              {% else %}
+              to be announced.
+              {% endif %}
+            </p>
+            {% if page.helper %}
+            <p>
+              <strong>Helpers:</strong>
+              {{page.helper | join: ', ' %}}
+            </p>
+            {% endif %}
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          {{content}}
-        </div>
-      </div>
-      {% include footer.html %}
     </div>
-    {% include javascript.html %}
-  </body>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      {{content}}
+    </div>
+  </div>
+  {% include footer.html %}
+</div>
+{% include javascript.html %}
+</body>
 </html>
