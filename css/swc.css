@@ -306,7 +306,8 @@ div.banner {
 
 /* Padding around image in top banner. */
 div.banner a img {
-	padding: 20px 25px;
+	padding: 20px 10px;
+	height: 100px;
 }
 
 /* Explanatory call-out boxes. */
