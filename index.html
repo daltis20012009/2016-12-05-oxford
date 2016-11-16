@@ -1,7 +1,7 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS.
-venue: "Medical Sciences Teaching Centre, University of Oxford"        # brief name of host site without address (e.g., "Euphoric State University")
+venue: "Bioinformatic Data Carpentry Workshop @ The Biochemistry Department, University of Oxford"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "John Radcliffe Hospital, Oxford OX3 9DU"      # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
 country: "GB"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
@@ -11,14 +11,10 @@ humantime: "9:00 am - 5:00 pm"    # human-readable time (e.g., "9:00 am - 4:30 p
 startdate: 2016-12-05      # use YYYY-MM-DD format like 2015-01-01
 enddate: 2016-12-06        # use YYYY-MM-DD format like 2015-01-02
 instructor: ["Krzysztof Poterlowicz", "Iain Emesley"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["To be announced"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Michal Gdula", "Aino Jarvelin", "Martin John Hadley", "Kinga Kamieniarz-Gdula"]    
 contact: ["a.nenadic@manchester.ac.uk", "michal.gdula@bioch.ox.ac.uk"]      # contact email address for workshop organizer, such as "grace@hopper.org"
 etherpad: "http://pad.software-carpentry.org/2016-12-05-oxford"        # optional (insert the URL for your Etherpad if you're using one)
-eventbrite: "5442789530"      # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB")
-day1_am: "Data organization in spreadsheets and OpenRefine"
-day1_pm: "Introduction to R"
-day2_am: "Data analysis and visualization in R"
-day2_pm: "SQL for data management"
+eventbrite: "5442789530"      # optional (insert the alphanumeric key for Eventbrite registration, e.g., "1234567890AB") 
 ---
 <!--
   HEADER
@@ -61,9 +57,7 @@ day2_pm: "SQL for data management"
   effectively with data.
 </p>
 <p>
-  We will cover {{page.day1_am}}, {{page.day1_pm}}, {{page.day2_am}} and {{page.day2_pm}}.
-
-  Participants should bring their laptops and plan to participate actively. By the end of the workshop learners should be able to more effectively manage and analyze data and be able to apply the tools and approaches directly to their ongoing research.
+  We will cover introduction to the UNIX shell, programming and data visualization in R. Standard Data Carpentry workshop will be followed by the third day of hands-on next generation sequencing (NGS) data analysis course. 
 </p>
 
 <!--
@@ -208,15 +202,34 @@ day2_pm: "SQL for data management"
 
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day1_am}}</td> </tr>
-      <tr> <td>Afternoon</td>  <td>{{page.day1_pm}}</td> </tr>
+         <tr>
+             <td>09:00-11:00</td>
+             <td> The Unix Shell</td>
+         </tr>
+          <tr>
+             <td>11:15:14:45</td>
+             <td>Github</td>
+          </tr>
+          <tr>
+             <td>15:00-18:00</td>
+             <td>Programming in R - introduction</td>
+          </tr>         
     </table>
-
 
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>Morning</td>  <td>{{page.day2_am}}</td> </tr>
-      <tr> <td>Afternoon</td>  <td>{{page.day2_pm}}</td> </tr>
+         <tr>
+             <td>09:00-18:00<td>
+             <td> Programming and Data Visualization in R</td>
+         </tr>        
+    </table>
+
+    <h3>Day 3</h3>
+    <table class="table table-striped">
+         <tr>
+             <td>09:00-18:00</td>
+             <td> RNA-seq and ChIP-seq analysis in R</td>
+         </tr>        
     </table>
   </div>
 </div>
